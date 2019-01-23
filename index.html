@@ -3,11 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+		
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/nodesource-light.css">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,600i" rel="stylesheet">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +25,56 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section class="title">
+					<h1>This is a title slide.</h1>
+					<h2>Optional subtitle goes here</h2>
+				</section>
+				
+				<section>
+					<h2>Here's a slide with some bullets</h2>
+					<ul>
+					  <li>First item - looking good!</li>
+					  <li>Second item</li>
+					  <li>Third item</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Another slide, but with text</h2>
+					<p>It's tricky to rock a rhyme to rock a rhyme that's right on time it's tricky (what) it's tricky tricky tricky</p>
+				</section>
+				
+				<section data-background-color="#202525" data-background-image="lib/img/facets.png" data-background-size="228px" data-background-repeat="repeat">
+					<h2>Fancy backgrounds have been provided</h2>
+				</section>
+				
+				<section>
+					<h2>Code also looks good</h2>
+					<pre>
+						<code class="hljs" data-trim contenteditable>
+							
+							var express = require('express');
+							var app = express();
+							
+							app.get('/', function (req, res) {
+							  res.send('Hello World!');
+							});
+							
+							app.listen(3000, function () {
+							  console.log('Example app listening on port 3000!');
+							});
+							
+						</code>
+					</pre>
+				</section>
+				
+				<section>
+					<h1>Slide 6</h1>
+				</section>
+				
+				<section>
+					<h1>Slide 7</h1>
+				</section>
 			</div>
 		</div>
 
@@ -37,12 +86,22 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				width: 1024,
+				height: 576,
+				transition: "slide",
+				margin: 0.2,
+				backgroundTransition: "slide",
+				center: true,
+				slideNumber: true,
+				progress: true,
+				controls: false,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
+
 			});
 		</script>
 	</body>

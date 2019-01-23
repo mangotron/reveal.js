@@ -10,6 +10,20 @@
 
 @font-face {
     font-family: 'Source Sans Pro';
+    src: url('source-sans-pro-light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('source-sans-pro-lightitalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
     src: url('source-sans-pro-italic.eot');
     src: url('source-sans-pro-italic.eot?#iefix') format('embedded-opentype'),
          url('source-sans-pro-italic.woff') format('woff'),
